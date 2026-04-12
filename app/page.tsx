@@ -1,10 +1,11 @@
-// Updated image paths
+import Image from 'next/image';
 
-// Fixing image source paths by adding leading slashes
-const images = {
-  nextjs: '/images/nextjs.svg',
-  nuxt: '/images/nuxt.svg',
-  svelte: '/images/svelte.svg'
-};
-
-export default images;
+export default function Page() {
+  return (
+    <div>
+      <Image src="/images/nextjs.svg" alt="Next.js" /> {/* Line 151 */}
+      <Image src="/images/nuxt.svg" alt="Nuxt.js" /> {/* Line 163 */}
+      <Image src="/images/svelte.svg" alt="Svelte" /> {/* Line 172 */}
+    </div>
+  );
+}
