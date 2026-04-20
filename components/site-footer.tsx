@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Phone, Mail, MapPin } from "lucide-react"
 import { POPULAR_PARTS, MAKES } from "@/lib/data"
 
@@ -10,9 +11,13 @@ export function SiteFooter() {
         {/* Brand column */}
         <div>
           <div className="flex items-center gap-3">
-            <div className="h-11 w-11 bg-primary text-primary-foreground flex items-center justify-center font-black text-sm tracking-tighter">
-              AUAPW
-            </div>
+            <Image
+              src="/images/auapw-logo.jpg"
+              alt="AUAPW logo"
+              width={44}
+              height={44}
+              className="h-11 w-11 object-contain"
+            />
             <div className="flex flex-col leading-tight">
               <span className="font-black text-white text-base tracking-tight">AUAPW.ORG</span>
               <span className="text-[10px] text-zinc-500 uppercase tracking-widest">
