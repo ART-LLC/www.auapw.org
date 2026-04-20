@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Phone, Truck, ShieldCheck, Clock } from "lucide-react"
 
 export function SiteHeader() {
@@ -35,9 +36,14 @@ export function SiteHeader() {
       <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur border-b border-border">
         <div className="mx-auto max-w-7xl px-4 h-16 md:h-20 flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3" aria-label="AUAPW home">
-            <div className="h-11 w-11 md:h-12 md:w-12 bg-primary text-primary-foreground flex items-center justify-center font-black text-sm md:text-base tracking-tighter">
-              AUAPW
-            </div>
+            <Image
+              src="/images/auapw-logo.jpg"
+              alt="AUAPW logo"
+              width={48}
+              height={48}
+              className="h-11 w-11 md:h-12 md:w-12 object-contain"
+              priority
+            />
             <div className="hidden sm:flex flex-col leading-tight">
               <span className="font-black text-foreground text-base md:text-lg tracking-tight">
                 AUAPW.ORG
